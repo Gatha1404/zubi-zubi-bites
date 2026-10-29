@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zubi Zubi Bites | Melt-in-Mouth Savory Crunch</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#121212',
+                            yellow: '#FFDE59',
+                            orange: '#FF914D',
+                            green: '#7ED957',
+                            purple: '#A855F7',
+                            pink: '#FF66C4',
+                        }
+                    },
+                    boxShadow: {
+                        'neo': '5px 5px 0px 0px #121212',
+                        'neo-lg': '8px 8px 0px 0px #121212',
+                        'neo-sm': '3px 3px 0px 0px #121212',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .neo-border {
+            border: 3px solid #121212;
+        }
+        .neo-btn {
+            transition: all 0.15s ease-in-out;
+        }
+        .neo-btn:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0px 0px #121212;
+        }
+        .neo-btn:active {
+            transform: translate(0px, 0px);
+            box-shadow: 2px 2px 0px 0px #121212;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F3F4F6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF914D;
+            border-radius: 5px;
+            border: 2px solid #121212;
+        }
+    </style>
+</head>
+<body class="bg-amber-50/40 text-gray-900 font-sans antialiased selection:bg-brand-yellow selection:text-black">
+
+    <!-- Sticky Announcement Bar -->
+    <div class="bg-brand-yellow neo-border border-t-0 border-x-0 py-2.5 px-4 text-center font-bold text-sm overflow-hidden whitespace-nowrap">
+        <div class="inline-block animate-marquee md:animate-none">
+            🚀 KITCHEN TRIALS LIVE IN AHMEDABAD! <span class="mx-2">•</span> 100% NON-GLUTEN GRAINS <span class="mx-2">•</span> NO DAIRY <span class="mx-2">•</span> SALT-BAKED SAVORY CRUNCH <span class="mx-2">•</span> JOIN TASTE CREW TODAY!
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md neo-border border-x-0 border-t-0 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-brand-yellow neo-border neo-shadow rounded-full flex items-center justify-center font-heading font-bold text-xl group-hover:rotate-12 transition-transform">
+                    🐼
+                </div>
+                <span class="font-heading font-extrabold text-2xl tracking-tight text-black">Zubi Zubi<span class="text-brand-orange">Bites</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 font-bold text-sm">
+                <a href="#flavors" class="hover:text-brand-orange transition-colors">5 Panda Lineup</a>
+                <a href="#analyzer" class="hover:text-brand-orange transition-colors">Nutrition Lab</a>
+                <a href="#tech" class="hover:text-brand-orange transition-colors">The Tech</a>
+                <a href="#signup" class="hover:text-brand-orange transition-colors">Ahmedabad Crew</a>
+            </div>
+
+            <a href="#signup" class="neo-btn bg-brand-orange text-black font-extrabold px-5 py-2.5 rounded-xl neo-border shadow-neo text-sm flex items-center gap-2">
+                <span>Join Taste Crew</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-12 lg:py-20 px-4 sm:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Text Content -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/30 text-black font-bold text-xs sm:text-sm neo-border">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-green animate-ping"></span>
+                    Small-Batch Kitchen Testing Live
+                </div>
+                
+                <h1 class="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl leading-none text-black tracking-tight">
+                    Melt-In-Mouth <br/>
+                    <span class="bg-brand-yellow px-3 py-1 neo-border inline-block rotate-[-1deg] my-2">Savory Crunch</span> <br/>
+                    In Panda Shapes! 🐼
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-700 max-w-2xl font-medium mx-auto lg:mx-0">
+                    High-protein, gluten-free savory bites made from native Indian grains (Ragi, Jowar, Sattu, Besan, Soya). <strong>No Dairy, Low Oil, Pure Salt-Baked Magic!</strong>
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#signup" class="w-full sm:w-auto neo-btn bg-brand-yellow text-black font-extrabold text-lg px-8 py-4 rounded-2xl neo-border shadow-neo-lg text-center">
+                        🔥 Become A Local Taste Tester
+                    </a>
+                    <a href="#flavors" class="w-full sm:w-auto neo-btn bg-white text-black font-extrabold text-lg px-8 py-4 rounded-2xl neo-border shadow-neo text-center">
+                        Explore 5 Flavors 🎨
+                    </a>
+                </div>
+
+                <!-- Quick USPs -->
+                <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+                    <div class="p-3 bg-white neo-border rounded-xl">
+                        <div class="font-heading font-extrabold text-xl text-brand-orange">100%</div>
+                        <div class="text-xs font-bold text-gray-600">Gluten-Free Flours</div>
+                    </div>
+                    <div class="p-3 bg-white neo-border rounded-xl">
+                        <div class="font-heading font-extrabold text-xl text-brand-purple">Salt-Baked</div>
+                        <div class="text-xs font-bold text-gray-600">Induction Cooked</div>
+                    </div>
+                    <div class="p-3 bg-white neo-border rounded-xl">
+                        <div class="font-heading font-extrabold text-xl text-brand-green">Plant Protein</div>
+                        <div class="text-xs font-bold text-gray-600">Sattu & Soya Powered</div>
+                    </div>
+                    <div class="p-3 bg-white neo-border rounded-xl">
+                        <div class="font-heading font-extrabold text-xl text-brand-pink">Zero Dairy</div>
+                        <div class="text-xs font-bold text-gray-600">100% Vegan Friendly</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Hero Graphic -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-full max-w-md bg-white neo-border rounded-3xl p-6 shadow-neo-lg space-y-6">
+                    <div class="bg-brand-pink/20 p-4 rounded-2xl neo-border flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-extrabold uppercase bg-brand-pink text-white px-2 py-0.5 rounded neo-border">Featured Flavor</span>
+                            <h3 class="font-heading font-bold text-xl mt-1">Orange Panda 🟠</h3>
+                        </div>
+                        <span class="text-4xl">🐼</span>
+                    </div>
+
+                    <!-- Interactive Panda Preview Plate -->
+                    <div class="bg-amber-100/60 neo-border rounded-2xl p-8 text-center relative overflow-hidden group">
+                        <div class="text-8xl transform group-hover:scale-110 transition-transform duration-300 inline-block cursor-pointer">
+                            🐼
+                        </div>
+                        <div class="mt-4 font-heading font-bold text-lg text-gray-800">
+                            Jowar & Sattu Fiery Peri-Peri
+                        </div>
+                        <div class="text-xs font-semibold text-gray-500 mt-1">Hot Water Scalded • Ultra Air-Baked</div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute top-3 right-3 bg-brand-yellow neo-border text-xs font-black px-2 py-1 rounded-md rotate-12 shadow-neo-sm">
+                            HOT & TANGY!
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 neo-border p-4 rounded-2xl space-y-2">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span>Melt-in-Mouth Rating</span>
+                            <span class="text-brand-orange">9.8 / 10</span>
+                        </div>
+                        <div class="w-full bg-gray-200 h-3 rounded-full overflow-hidden neo-border">
+                            <div class="bg-brand-orange h-full w-[98%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5 Panda Variants Showcase Section -->
+    <section id="flavors" class="py-16 px-4 sm:px-8 bg-white border-y-4 border-black">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
+                <div class="inline-block bg-brand-purple text-white font-extrabold text-xs px-3 py-1 rounded-full neo-border uppercase tracking-wider">
+                    The Zubi Rainbow
+                </div>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-black">
+                    Meet The 5 Savory Panda Squad 🐼
+                </h2>
+                <p class="text-gray-600 font-medium">
+                    Each color is 100% natural, derived from native nutrient-dense grains and superfoods. No artificial colors!
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Black Panda -->
+                <div class="bg-gray-900 text-white rounded-3xl p-6 neo-border shadow-neo-lg flex flex-col justify-between transform hover:-translate-y-2 transition-all">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-black bg-white text-black px-3 py-1 rounded-full neo-border">Ragi + Cocoa Base</span>
+                            <span class="text-4xl">🖤</span>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-extrabold text-2xl text-brand-yellow">Black Panda</h3>
+                            <p class="text-xs text-gray-400 font-semibold mt-1">Earthy, Deep & Spicy</p>
+                        </div>
+                        <div class="p-3 bg-gray-800 rounded-xl neo-border border-gray-700 text-sm space-y-1">
+                            <div class="text-xs text-brand-yellow font-bold uppercase">Trending Seasoning:</div>
+                            <div class="font-bold text-white">Korean Chilli-Garlic / Smoky BBQ</div>
+                        </div>
+                        <ul class="text-xs space-y-2 text-gray-300 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Rich in Calcium & Fiber (Ragi)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Unsweetened Dark Cocoa Color</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> High-Protein Sattu Binder</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectFlavorForAnalyzer('black')" class="mt-6 w-full neo-btn bg-brand-yellow text-black font-extrabold py-2.5 rounded-xl neo-border text-sm">
+                        View Health Profile →
+                    </button>
+                </div>
+
+                <!-- 2. White Panda -->
+                <div class="bg-slate-50 text-black rounded-3xl p-6 neo-border shadow-neo-lg flex flex-col justify-between transform hover:-translate-y-2 transition-all">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-black bg-brand-purple text-white px-3 py-1 rounded-full neo-border">Soya Base</span>
+                            <span class="text-4xl">🤍</span>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-extrabold text-2xl text-black">White Panda</h3>
+                            <p class="text-xs text-gray-500 font-semibold mt-1">Super Airy & Melt-In-Mouth</p>
+                        </div>
+                        <div class="p-3 bg-purple-50 rounded-xl neo-border text-sm space-y-1">
+                            <div class="text-xs text-brand-purple font-bold uppercase">Trending Seasoning:</div>
+                            <div class="font-bold text-gray-900">Jalapeño Chilli-Cheese / Creamy Garlic</div>
+                        </div>
+                        <ul class="text-xs space-y-2 text-gray-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-purple"></i> Highest Protein Count (Soya)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-purple"></i> Baking Soda Boosted Porous Crunch</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-purple"></i> Zero Dairy Cheese Flavoring</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectFlavorForAnalyzer('white')" class="mt-6 w-full neo-btn bg-brand-purple text-white font-extrabold py-2.5 rounded-xl neo-border text-sm">
+                        View Health Profile →
+                    </button>
+                </div>
+
+                <!-- 3. Yellow Panda -->
+                <div class="bg-amber-100 text-black rounded-3xl p-6 neo-border shadow-neo-lg flex flex-col justify-between transform hover:-translate-y-2 transition-all">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-black bg-brand-yellow text-black px-3 py-1 rounded-full neo-border">Besan & Corn Meal</span>
+                            <span class="text-4xl">🟡</span>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-extrabold text-2xl text-black">Yellow Panda</h3>
+                            <p class="text-xs text-gray-600 font-semibold mt-1">Classic Butter-Garlic Crunch</p>
+                        </div>
+                        <div class="p-3 bg-white rounded-xl neo-border text-sm space-y-1">
+                            <div class="text-xs text-yellow-600 font-bold uppercase">Trending Seasoning:</div>
+                            <div class="font-bold text-gray-900">Butter-Garlic & Mexican Lime-Chili</div>
+                        </div>
+                        <ul class="text-xs space-y-2 text-gray-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-600"></i> Pure Haldi (Turmeric) Yellow Glow</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-600"></i> Besan Natural Strong Binding</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-600"></i> Tangy Citrus-Spice Kick</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectFlavorForAnalyzer('yellow')" class="mt-6 w-full neo-btn bg-brand-yellow text-black font-extrabold py-2.5 rounded-xl neo-border text-sm">
+                        View Health Profile →
+                    </button>
+                </div>
+
+                <!-- 4. Orange Panda -->
+                <div class="bg-orange-100 text-black rounded-3xl p-6 neo-border shadow-neo-lg flex flex-col justify-between transform hover:-translate-y-2 transition-all">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-black bg-brand-orange text-black px-3 py-1 rounded-full neo-border">Jowar & Sattu</span>
+                            <span class="text-4xl">🟠</span>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-extrabold text-2xl text-black">Orange Panda</h3>
+                            <p class="text-xs text-gray-600 font-semibold mt-1">Fiery Tangy & Super Light</p>
+                        </div>
+                        <div class="p-3 bg-white rounded-xl neo-border text-sm space-y-1">
+                            <div class="text-xs text-brand-orange font-bold uppercase">Trending Seasoning:</div>
+                            <div class="font-bold text-gray-900">Fiery Peri-Peri & Achari Punch</div>
+                        </div>
+                        <ul class="text-xs space-y-2 text-gray-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Scalded Jowar Starch Tech</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Kashmiri Red Chilli Natural Hue</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Amchur & Bhuna Jeera Flavor Base</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectFlavorForAnalyzer('orange')" class="mt-6 w-full neo-btn bg-brand-orange text-black font-extrabold py-2.5 rounded-xl neo-border text-sm">
+                        View Health Profile →
+                    </button>
+                </div>
+
+                <!-- 5. Green Panda -->
+                <div class="bg-emerald-100 text-black rounded-3xl p-6 neo-border shadow-neo-lg flex flex-col justify-between transform hover:-translate-y-2 transition-all md:col-span-2 lg:col-span-1">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-black bg-brand-green text-black px-3 py-1 rounded-full neo-border">Spinach & Herbs</span>
+                            <span class="text-4xl">🟢</span>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-extrabold text-2xl text-black">Green Panda</h3>
+                            <p class="text-xs text-gray-600 font-semibold mt-1">Cafe-Style Savory Herb Bite</p>
+                        </div>
+                        <div class="p-3 bg-white rounded-xl neo-border text-sm space-y-1">
+                            <div class="text-xs text-emerald-700 font-bold uppercase">Trending Seasoning:</div>
+                            <div class="font-bold text-gray-900">Italian Herbs & Garlic Chutney</div>
+                        </div>
+                        <ul class="text-xs space-y-2 text-gray-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700"></i> Pure Dehydrated Spinach Powder</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700"></i> Oregano & Mixed Herb Infusion</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700"></i> Iron & Micro-nutrient Dense</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectFlavorForAnalyzer('green')" class="mt-6 w-full neo-btn bg-brand-green text-black font-extrabold py-2.5 rounded-xl neo-border text-sm">
+                        View Health Profile →
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Flavor & Nutrition Analyzer Section -->
+    <section id="analyzer" class="py-16 px-4 sm:px-8 bg-amber-50">
+        <div class="max-w-5xl mx-auto space-y-8">
+            
+            <div class="text-center space-y-3">
+                <div class="inline-block bg-black text-brand-yellow font-extrabold text-xs px-3 py-1 rounded-full neo-border uppercase">
+                    Interactive Tech Lab
+                </div>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-black">
+                    Panda Nutrition & Binding Analyzer 🧬
+                </h2>
+                <p class="text-gray-600 text-sm font-medium">
+                    Select any Panda variant to reveal its exact flour blend, protein metrics, and hot-scalding binding technology.
+                </p>
+            </div>
+
+            <!-- Analyzer Interactive Console -->
+            <div class="bg-white neo-border rounded-3xl p-6 sm:p-8 shadow-neo-lg space-y-8">
+                
+                <!-- Selector Tabs -->
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <button onclick="renderAnalyzer('black')" id="btn-black" class="analyzer-tab neo-btn px-4 py-2 rounded-xl neo-border font-extrabold text-sm flex items-center gap-2 bg-gray-900 text-white">
+                        <span>🖤 Black Panda</span>
+                    </button>
+                    <button onclick="renderAnalyzer('white')" id="btn-white" class="analyzer-tab neo-btn px-4 py-2 rounded-xl neo-border font-extrabold text-sm flex items-center gap-2 bg-gray-100 text-black">
+                        <span>🤍 White Panda</span>
+                    </button>
+                    <button onclick="renderAnalyzer('yellow')" id="btn-yellow" class="analyzer-tab neo-btn px-4 py-2 rounded-xl neo-border font-extrabold text-sm flex items-center gap-2 bg-yellow-100 text-black">
+                        <span>🟡 Yellow Panda</span>
+                    </button>
+                    <button onclick="renderAnalyzer('orange')" id="btn-orange" class="analyzer-tab neo-btn px-4 py-2 rounded-xl neo-border font-extrabold text-sm flex items-center gap-2 bg-orange-100 text-black">
+                        <span>🟠 Orange Panda</span>
+                    </button>
+                    <button onclick="renderAnalyzer('green')" id="btn-green" class="analyzer-tab neo-btn px-4 py-2 rounded-xl neo-border font-extrabold text-sm flex items-center gap-2 bg-emerald-100 text-black">
+                        <span>🟢 Green Panda</span>
+                    </button>
+                </div>
+
+                <!-- Dynamic Info Display Card -->
+                <div id="analyzer-card" class="bg-amber-50/60 neo-border rounded-2xl p-6 sm:p-8 space-y-6">
+                    <!-- Content populated via JavaScript -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Baking & Tech Process Section -->
+    <section id="tech" class="py-16 px-4 sm:px-8 bg-brand-yellow neo-border border-x-0">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-black">
+                    How We Make Non-Gluten Flours Melt-In-Your-Mouth 🔬
+                </h2>
+                <p class="text-black font-semibold max-w-2xl mx-auto">
+                    Non-gluten grains usually crumble easily. Here is our 3-step kitchen technology for perfect crispy panda shapes!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="bg-white p-6 rounded-2xl neo-border shadow-neo space-y-3">
+                    <div class="w-12 h-12 bg-brand-orange text-black font-heading font-extrabold text-2xl rounded-xl neo-border flex items-center justify-center">
+                        1
+                    </div>
+                    <h3 class="font-heading font-bold text-xl">Hot Water Scalding</h3>
+                    <p class="text-sm text-gray-700 font-medium">
+                        Boiling hot water gelatinizes tapioca & native grain starches, turning fragile flour into a smooth, flexible dough without gluten.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl neo-border shadow-neo space-y-3">
+                    <div class="w-12 h-12 bg-brand-purple text-white font-heading font-extrabold text-2xl rounded-xl neo-border flex items-center justify-center">
+                        2
+                    </div>
+                    <h3 class="font-heading font-bold text-xl">Kadhai Salt-Baking</h3>
+                    <p class="text-sm text-gray-700 font-medium">
+                        Cooked on induction at 165°C using salt-bed heat circulation. Zero deep-frying, preserving low-oil counts and maximum crunch.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl neo-border shadow-neo space-y-3">
+                    <div class="w-12 h-12 bg-brand-green text-black font-heading font-extrabold text-2xl rounded-xl neo-border flex items-center justify-center">
+                        3
+                    </div>
+                    <h3 class="font-heading font-bold text-xl">Post-Bake Dusting</h3>
+                    <p class="text-sm text-gray-700 font-medium">
+                        Immediate light oil mist spray onto warm bites followed by fine seasoning dust (Peri-Peri, Magic Masala) for instant stickiness.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Taste-Test Signup Section -->
+    <section id="signup" class="py-16 px-4 sm:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-brand-pink/20 neo-border rounded-3xl p-6 sm:p-10 shadow-neo-lg grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left Details -->
+                <div class="md:col-span-5 space-y-4 text-center md:text-left">
+                    <span class="bg-brand-pink text-white font-black text-xs px-3 py-1 rounded-full neo-border uppercase">
+                        Ahmedabad Trials
+                    </span>
+                    <h2 class="font-heading font-extrabold text-3xl text-black leading-tight">
+                        Become A Zubi Taste Tester! 🐼
+                    </h2>
+                    <p class="text-sm text-gray-700 font-medium">
+                        We are conducting small-batch kitchen trials in <strong>Ranip / New Ranip / Ahmedabad</strong>. Sign up to get a free trial box delivered to your doorstep!
+                    </p>
+                    <div class="p-3 bg-white neo-border rounded-xl text-xs space-y-1">
+                        <div class="font-bold text-black"><i class="fa-solid fa-location-dot text-brand-orange"></i> Target Areas:</div>
+                        <div class="text-gray-600">Ranip, New Ranip, Naranpura, Sabarmati & nearby.</div>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="md:col-span-7 bg-white p-6 rounded-2xl neo-border shadow-neo">
+                    <form id="taste-test-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-extrabold uppercase mb-1">Your Name</label>
+                            <input type="text" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-2.5 rounded-xl neo-border text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase mb-1">Area / Location</label>
+                                <input type="text" required placeholder="e.g. Ranip, Ahmedabad" class="w-full px-4 py-2.5 rounded-xl neo-border text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase mb-1">WhatsApp Number</label>
+                                <input type="tel" required placeholder="10-digit number" class="w-full px-4 py-2.5 rounded-xl neo-border text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-extrabold uppercase mb-1">Which Flavor Do You Want First?</label>
+                            <select id="flavor-choice-select" class="w-full px-4 py-2.5 rounded-xl neo-border text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange bg-white font-medium">
+                                <option value="Orange Panda">🟠 Orange Panda (Fiery Peri-Peri)</option>
+                                <option value="Black Panda">🖤 Black Panda (Korean Chilli-Garlic)</option>
+                                <option value="White Panda">🤍 White Panda (Jalapeño Cheese)</option>
+                                <option value="Yellow Panda">🟡 Yellow Panda (Mexican Lime-Chili)</option>
+                                <option value="Green Panda">🟢 Green Panda (Herb & Garlic Chutney)</option>
+                                <option value="All 5 Sampler Box">🎁 All 5 Panda Sampler Box!</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full neo-btn bg-brand-yellow text-black font-extrabold py-3 rounded-xl neo-border shadow-neo text-base mt-2">
+                            🚀 Claim Free Trial Box
+                        </button>
+                    </form>
+
+                    <!-- Success Message Alert -->
+                    <div id="form-success" class="hidden p-4 bg-brand-green/30 neo-border rounded-xl text-center space-y-2">
+                        <div class="text-3xl">🎉</div>
+                        <h4 class="font-heading font-extrabold text-lg text-black">You are on the Taste Test List!</h4>
+                        <p class="text-xs text-gray-800 font-medium">We will WhatsApp you as soon as the fresh kitchen batch is ready for delivery in your area!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white neo-border border-x-0 border-b-0 py-12 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-yellow text-black neo-border rounded-full flex items-center justify-center font-heading font-bold text-xl">
+                    🐼
+                </div>
+                <span class="font-heading font-extrabold text-2xl tracking-tight text-white">Zubi Zubi<span class="text-brand-yellow">Bites</span></span>
+            </div>
+
+            <p class="text-xs text-gray-400 max-w-md font-medium">
+                High-Protein Savory Grain Snacks • Non-Gluten • No Dairy • Salt-Baked in Ahmedabad, Gujarat.
+            </p>
+
+            <div class="text-xs font-bold text-brand-yellow">
+                © 2026 Zubi Zubi Bites. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Data Script -->
+    <script>
+        const analyzerData = {
+            black: {
+                title: "Black Panda (Ragi & Dark Cocoa)",
+                badge: "Earthy & High Calcium",
+                colorClass: "bg-gray-900 text-white",
+                flours: "Ragi Flour (30g) + Sattu (15g) + Rice Flour (5g)",
+                bindingTech: "Tapioca Starch (5g) + Hot Water Scalding",
+                seasoning: "Korean Chilli-Garlic or Smoky BBQ Dusting",
+                protein: "High Plant Protein (Sattu Powered)",
+                dairy: "100% Dairy-Free & Vegan",
+                crispiness: "Densely Crunchy & Earthy",
+                sodium: "Low Salt Base + Amchur Punch"
+            },
+            white: {
+                title: "White Panda (Soya & Porous Base)",
+                badge: "Super Light & High Protein",
+                colorClass: "bg-purple-100 text-black",
+                flours: "Soya Flour (30g) + Rice Flour (15g) + Corn Starch (5g)",
+                bindingTech: "Baking Soda Airy Aeration + Hot Scalding",
+                seasoning: "Jalapeño Chilli-Cheese / Creamy Garlic",
+                protein: "Highest Protein Count (~20% per serving)",
+                dairy: "100% Dairy-Free (Vegan Cheese Notes)",
+                crispiness: "Melt-In-Mouth Porous Crisp",
+                sodium: "Balanced Umami (MSG Enhanced)"
+            },
+            yellow: {
+                title: "Yellow Panda (Besan & Corn Meal)",
+                badge: "Natural Turmeric Glow",
+                colorClass: "bg-amber-100 text-black",
+                flours: "Besan (30g) + Yellow Corn Meal (15g) + Rice Flour (5g)",
+                bindingTech: "Gram Flour Natural Protein Binding",
+                seasoning: "Butter-Garlic & Mexican Lime-Chili",
+                protein: "Rich Sattu & Besan Amino Profile",
+                dairy: "100% Dairy-Free",
+                crispiness: "Classic Biscuit-Style Savory Snap",
+                sodium: "Tangy Amchur & Kala Namak"
+            },
+            orange: {
+                title: "Orange Panda (Jowar & Kashmiri Red Chilli)",
+                badge: "Fiery & Ultra Light Digestible",
+                colorClass: "bg-orange-100 text-black",
+                flours: "Jowar Flour (30g) + Sattu (15g) + Rice Flour (5g)",
+                bindingTech: "Extra Tapioca Gelatinization (1.5 tsp) for Jowar",
+                seasoning: "Fiery Peri-Peri & Achari Chutney",
+                protein: "Digestible Millet + Sattu Combo",
+                dairy: "100% Dairy-Free",
+                crispiness: "Airy & Light Crackling Bite",
+                sodium: "Spicy Citrus Punch"
+            },
+            green: {
+                title: "Green Panda (Spinach & Herb Infusion)",
+                badge: "Micro-Nutrient Dense",
+                colorClass: "bg-emerald-100 text-black",
+                flours: "Wheat Atta / Jowar (30g) + Rice Flour (15g) + Sattu (5g)",
+                bindingTech: "Hot Water Scalded Dough + Herb Oil Spray",
+                seasoning: "Italian Mixed Herbs & Garlic Chutney",
+                protein: "Balanced Plant Base",
+                dairy: "100% Dairy-Free",
+                crispiness: "Savory Herb Roasted Crunch",
+                sodium: "Herbal Garlic Salt Base"
+            }
+        };
+
+        function renderAnalyzer(variantKey) {
+            const data = analyzerData[variantKey];
+            const container = document.getElementById('analyzer-card');
+            
+            // Highlight active tab
+            document.querySelectorAll('.analyzer-tab').forEach(tab => {
+                tab.classList.remove('ring-4', 'ring-brand-orange');
+            });
+            const activeBtn = document.getElementById(`btn-${variantKey}`);
+            if(activeBtn) activeBtn.classList.add('ring-4', 'ring-brand-orange');
+
+            container.innerHTML = `
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-4 border-b-2 border-black">
+                    <div>
+                        <span class="text-xs font-black bg-black text-brand-yellow px-3 py-1 rounded-full neo-border uppercase">
+                            ${data.badge}
+                        </span>
+                        <h3 class="font-heading font-extrabold text-2xl text-black mt-2">${data.title}</h3>
+                    </div>
+                    <div class="bg-white neo-border px-4 py-2 rounded-xl text-xs font-extrabold">
+                        Batch Size: 50g Trial Ratio
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm font-medium">
+                    <div class="bg-white p-4 rounded-xl neo-border space-y-1">
+                        <div class="text-xs text-gray-500 font-bold uppercase">🌾 Flour Formula:</div>
+                        <div class="font-bold text-gray-900">${data.flours}</div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl neo-border space-y-1">
+                        <div class="text-xs text-brand-orange font-bold uppercase">⚡ Binding Tech:</div>
+                        <div class="font-bold text-gray-900">${data.bindingTech}</div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl neo-border space-y-1">
+                        <div class="text-xs text-brand-purple font-bold uppercase">🌶️ Seasoning Profile:</div>
+                        <div class="font-bold text-gray-900">${data.seasoning}</div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl neo-border space-y-1">
+                        <div class="text-xs text-emerald-600 font-bold uppercase">💪 Protein Metric:</div>
+                        <div class="font-bold text-gray-900">${data.protein}</div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl neo-border space-y-1">
+                        <div class="text-xs text-blue-600 font-bold uppercase">🌱 Dairy Status:</div>
+                        <div class="font-bold text-gray-900">${data.dairy}</div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl neo-border space-y-1">
+                        <div class="text-xs text-pink-600 font-bold uppercase">✨ Texture Profile:</div>
+                        <div class="font-bold text-gray-900">${data.crispiness}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectFlavorForAnalyzer(flavor) {
+            document.getElementById('analyzer').scrollIntoView({ behavior: 'smooth' });
+            renderAnalyzer(flavor);
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('taste-test-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+
+        // Initialize default view
+        window.onload = function() {
+            renderAnalyzer('orange');
+        };
+    </script>
+</body>
+</html>
